@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>BUYGET Pizza</title>
+</head>
+
+<body class="page">
+    <header class="header page__header">
+        <div class="wrapper">
+            <h1 class="logo logo_header">BUYGET</h1>
+            <ul class="nav">
+                <li class="nav__item">Меню</li>
+                <li class="nav__item">Акции</li>
+                <li class="nav__item">О нас</li>
+                <li class="nav__item">
+                    Корзина
+                    <figure class="nav__cart"></figure>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="basket__wrapper">
+            <div class="order">
+                <h2 class="order__header">Оформление заказа</h2>
+                <form class="order__form">
+                    <label class="order__form_info">ФИО <input class="order__form_input" type="text"
+            /></label>
+                    <label class="order__form_info">Выбор ресторана
+              <select class="order__form_select">
+                <option value="first">ул. П.Мстиславца, 4</option>
+              </select>
+            </label>
+                    <span class="order__form_input red-center">или</span>
+                    <label class="order__form_info">Адрес доставки <input class="order__form_input" type="text"
+            /></label>
+                    <label class="order__form_info">Предпочтительное время*
+              <input class="order__form_input" type="text"
+            /></label>
+                    <label class="order__form_info">Номер телефона* <input class="order__form_input" type="text"
+            /></label>
+                    <label class="order__form_comment">Комментарий
+              <textarea class="order__form_input" type="text"></textarea>
+            </label>
+                    <button class="order__form_button">Оформить заказ</button>
+                </form>
+            </div>
+            <div class="basket">
+                <h2 class="basket__header">Корзина</h2>
+                <div class="basket__card">
+                    <button class="basket__card_delete"></button>
+                    <img class="basket__card_image" src="./img/" alt="" />
+                    <h3 class="basket__card_header">НАЗВАНИЕ</h3>
+                    <p class="basket__card_info">30 см, тонкое тесто, 600 гр</p>
+                    <p class="basket__card_info color-grey">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo mollitia cum facere dolore?
+                    </p>
+                    <span class="basket__card_price">300 BYN</span>
+                    <div class="basket_card_number">
+                        <button class="number__edit">+</button>
+                        <span class="number__num">1</span>
+                        <button class="number__edit">-</button>
+                    </div>
+                </div>
+                <h2 class="basket__sum">
+                    Итого: <span class="busket__sum_num">600 BYN</span>
+                </h2>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer page__footer">
+        <p class="authors">
+            Подготовили студенты гр. 810902:<br /> Детнер Кирилл<br /> Баранова Анна<br /> Матышев Константин
+        </p>
+    </footer>
+</body>
+
+</html>

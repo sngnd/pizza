@@ -1,84 +1,112 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
     <title>BUYGET Pizza</title>
-</head>
+  </head>
 
-<body class="page">
+  <body class="page">
     <header class="header page__header">
-        <div class="wrapper">
-            <h1 class="logo logo_header">BUYGET</h1>
-            <ul class="nav">
-                <li class="nav__item">Меню</li>
-                <li class="nav__item">Акции</li>
-                <li class="nav__item">О нас</li>
-                <li class="nav__item">
-                    Корзина
-                    <figure class="nav__cart"></figure>
-                </li>
-            </ul>
-        </div>
+      <div class="wrapper">
+        <h1 class="logo logo_header"><a href="index.html">BUYGET</a></h1>
+        <ul class="nav">
+          <li class="nav__item">Меню</li>
+          <li class="nav__item">Акции</li>
+          <li class="nav__item">О нас</li>
+          <li class="nav__item">
+            <a href="basket.html"
+              >Корзина
+              <img class="nav__cart" src="./img/basket.png" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
     <main>
-        <section class="basket__wrapper">
-            <div class="order">
-                <h2 class="order__header">Оформление заказа</h2>
-                <form class="order__form">
-                    <label class="order__form_info">ФИО <input class="order__form_input" type="text"
-            /></label>
-                    <label class="order__form_info">Выбор ресторана
-              <select class="order__form_select">
-                <option value="first">ул. П.Мстиславца, 4</option>
-              </select>
-            </label>
-                    <span class="order__form_input red-center">или</span>
-                    <label class="order__form_info">Адрес доставки <input class="order__form_input" type="text"
-            /></label>
-                    <label class="order__form_info">Предпочтительное время*
-              <input class="order__form_input" type="text"
-            /></label>
-                    <label class="order__form_info">Номер телефона* <input class="order__form_input" type="text"
-            /></label>
-                    <label class="order__form_comment">Комментарий
-              <textarea class="order__form_input" type="text"></textarea>
-            </label>
-                    <button class="order__form_button">Оформить заказ</button>
-                </form>
-            </div>
-            <div class="basket">
-                <h2 class="basket__header">Корзина</h2>
-                <div class="basket__card">
-                    <button class="basket__card_delete"></button>
-                    <img class="basket__card_image" src="./img/" alt="" />
-                    <h3 class="basket__card_header">НАЗВАНИЕ</h3>
-                    <p class="basket__card_info">30 см, тонкое тесто, 600 гр</p>
-                    <p class="basket__card_info color-grey">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo mollitia cum facere dolore?
-                    </p>
+      <section class="basket__wrapper">
+        <div class="wrapper">
+          <div class="order">
+            <h2 class="order__title">Оформление заказа</h2>
+            <form class="order__form">
+              <label class="order__form_info"
+                >ФИО* <input class="order__form_input" type="text"
+              /></label>
+              <label class="order__form_info"
+                >Выбор ресторана
+                <select class="order__form_select">
+                  <option value="first">ул. П.Мстиславца, 4</option>
+                </select>
+              </label>
+              <span class="order__form_info red-center">или</span>
+              <label class="order__form_info"
+                >Адрес доставки <input class="order__form_input" type="text"
+              /></label>
+              <label class="order__form_info"
+                >Предпочтительное время*
+                <input class="order__form_input" type="text"
+              /></label>
+              <label class="order__form_info"
+                >Номер телефона* <input class="order__form_input" type="text"
+              /></label>
+              <label class="order__form_comment"
+                >Комментарий
+                <textarea class="order__form_input" type="text"></textarea>
+              </label>
+              <button class="btn btn_red">Оформить заказ</button>
+            </form>
+          </div>
+          <div class="basket">
+            <h2 class="order__title">Корзина</h2>
+            <div class="basket__card">
+              <div class="button__wrapper">
+                <button class="basket__card_delete">
+                  <img src="./img/delete.png" alt="" />
+                </button>
+              </div>
+              <div class="basket__card_wrapper">
+                <img class="basket__card_image" src="./img/pizza.png" alt="" />
+                <div class="basket__card_info">
+                  <h3 class="basket__card_header">НАЗВАНИЕ</h3>
+                  <p class="basket__card_text">30 см, тонкое тесто, 600 гр</p>
+                  <p class="basket__card_text color-gray">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Explicabo mollitia cum facere dolore?
+                  </p>
+                  <div class="basket__card_sum">
                     <span class="basket__card_price">300 BYN</span>
                     <div class="basket_card_number">
-                        <button class="number__edit">+</button>
-                        <span class="number__num">1</span>
-                        <button class="number__edit">-</button>
+                      <button class="number__edit">+</button>
+                      <span class="number__num">1</span>
+                      <button class="number__edit">-</button>
                     </div>
+                  </div>
                 </div>
-                <h2 class="basket__sum">
-                    Итого: <span class="busket__sum_num">600 BYN</span>
-                </h2>
+              </div>
             </div>
-        </section>
+            <h2 class="basket__sum">
+              Итого: <span class="busket__sum_num">600 BYN</span>
+            </h2>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer page__footer">
-        <p class="authors">
-            Подготовили студенты гр. 810902:<br /> Детнер Кирилл<br /> Баранова Анна<br /> Матышев Константин
-        </p>
+      <p class="authors">
+        Подготовили студенты гр. 810902:<span><br /> Детнер Кирилл<br /> Баранова Анна<br /> Матышев Константин</span>
+      </p>
     </footer>
-</body>
-
+  </body>
 </html>

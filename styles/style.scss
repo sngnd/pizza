@@ -79,6 +79,17 @@ button {
     height: 100%;
     align-items: center;
   }
+  .btn {
+    margin-top: 12px;
+    background: #DD0909;
+    border-radius: 40px;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    width: 270px;
+    height: 60px;
+  }
+
 }
 
 .info {
@@ -146,6 +157,8 @@ button {
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 70px;
   .pizza-card {
+    background-color: #F4F4F4;
+    padding: 22px;
     margin-top: 50px;
     text-align: center;
     .pizza-card__image {
@@ -182,15 +195,26 @@ button {
     }
     .btn {
       margin-top: 12px;
+      background: #DD0909;
+      border-radius: 40px;
+      color: #fff;
+      border: none;
+      font-size: 14px;
+      width: 140px;
+      height: 40px;
     }
   }
 }
 
 .menu__extend {
+  width: 100%;
+  border: none;
+  background-color: #DCDCDC;
+  height: 48px;
   margin-top: 26px;
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
   color: #000000;
 }
@@ -386,6 +410,13 @@ span.slider__dot {
   flex-direction: column;
   .btn_red {
     margin: 45px 0 91px;
+    background: #DD0909;
+    border-radius: 40px;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    width: 280px;
+    height: 60px;
   }
 }
 
@@ -480,7 +511,18 @@ textarea {
         font-size: 14px;
       }
       .basket_card_number {
-        display: inline-block;
+        display: flex;
+        justify-content: space-between;
+        width: 68px;
+        background-color: #ECECEC;
+        border-radius: 15px;
+        button {
+          border: none;
+          background-color: #ECECEC;
+        }
+        span {
+          background-color: #ECECEC;
+        }
       }
     }
   }

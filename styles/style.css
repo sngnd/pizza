@@ -78,6 +78,16 @@ button {
   height: 100%;
   align-items: center;
 }
+.content__background .btn {
+  margin-top: 12px;
+  background: #DD0909;
+  border-radius: 40px;
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  width: 270px;
+  height: 60px;
+}
 
 .info {
   display: flex;
@@ -143,6 +153,8 @@ button {
   grid-column-gap: 70px;
 }
 .menu__pizza .pizza-card {
+  background-color: #F4F4F4;
+  padding: 22px;
   margin-top: 50px;
   text-align: center;
 }
@@ -180,13 +192,24 @@ button {
 }
 .menu__pizza .pizza-card .btn {
   margin-top: 12px;
+  background: #DD0909;
+  border-radius: 40px;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  width: 140px;
+  height: 40px;
 }
 
 .menu__extend {
+  width: 100%;
+  border: none;
+  background-color: #DCDCDC;
+  height: 48px;
   margin-top: 26px;
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
   color: #000000;
 }
@@ -378,6 +401,13 @@ span.slider__dot {
 }
 .order__form .btn_red {
   margin: 45px 0 91px;
+  background: #DD0909;
+  border-radius: 40px;
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  width: 280px;
+  height: 60px;
 }
 
 .order__form_input,
@@ -474,7 +504,18 @@ textarea {
   font-size: 14px;
 }
 .basket__card_wrapper .basket__card_info .basket__card_sum .basket_card_number {
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  width: 68px;
+  background-color: #ECECEC;
+  border-radius: 15px;
+}
+.basket__card_wrapper .basket__card_info .basket__card_sum .basket_card_number button {
+  border: none;
+  background-color: #ECECEC;
+}
+.basket__card_wrapper .basket__card_info .basket__card_sum .basket_card_number span {
+  background-color: #ECECEC;
 }
 
 .basket__sum {

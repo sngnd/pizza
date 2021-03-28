@@ -37,7 +37,7 @@ header {
       justify-content: space-between;
       .nav__item {
         cursor: pointer;
-        margin-left: 1.5rem;
+        margin-left: 3.5rem;
         display: flex;
         img {
           width: 21px;
@@ -111,6 +111,8 @@ button {
 }
 
 .menu {
+  margin-top: 36px;
+
   .wrapper {
     flex-wrap: wrap;
   }
@@ -132,6 +134,10 @@ button {
     top: 0;
     display: flex;
     justify-content: right;
+
+    .sort-type {
+      margin-left: 10px;
+    }
   }
 }
 
@@ -140,6 +146,7 @@ button {
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 70px;
   .pizza-card {
+    margin-top: 50px;
     text-align: center;
     .pizza-card__image {
       background-image: url(../img/pizza.png);
@@ -155,22 +162,32 @@ button {
       text-transform: uppercase;
     }
     .pizza-card__price-range {
+      margin-top: 9px;
       font-weight: 600;
       font-size: 17px;
     }
     .pizza-card__description {
+      margin-top: 11px;
       font-weight: normal;
       font-size: 14px;
       color: #484848;
     }
+    .pizza-card__params {
+      margin-top: 5px;
+    }
     .pizza__price {
+      margin-top: 18px;
       font-weight: normal;
       font-size: 16px;
+    }
+    .btn {
+      margin-top: 12px;
     }
   }
 }
 
 .menu__extend {
+  margin-top: 26px;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -179,6 +196,7 @@ button {
 }
 
 .sales {
+  margin-top: 68px;
   .wrapper {
     flex-direction: column;
     justify-content: center;
@@ -279,6 +297,9 @@ span.slider__dot {
   .wrapper {
     display: block;
   }
+  &__title {
+    margin-top: 90px;
+  }
 }
 
 .advantages {
@@ -287,6 +308,7 @@ span.slider__dot {
 }
 
 .advantage {
+  margin-top: 100px;
   display: flex;
   justify-content: space-between;
   .advantage__description {
@@ -324,6 +346,8 @@ span.slider__dot {
 }
 
 .address {
+  margin: 225px 0 49px;
+  line-height: 40px;
   font-weight: bold;
   font-size: 20px;
   color: #484848;
@@ -331,7 +355,9 @@ span.slider__dot {
 }
 
 .footer {
+  padding: 44px 0 38px;
   background-color: black;
+  line-height: 20px;
   color: white;
   text-align: center;
   font-style: normal;
@@ -343,6 +369,7 @@ span.slider__dot {
 }
 
 .basket__wrapper {
+  margin-top: 67px;
   .wrapper {
     justify-content: space-between;
     .order {
@@ -357,10 +384,14 @@ span.slider__dot {
 .order__form {
   display: flex;
   flex-direction: column;
+  .btn_red {
+    margin: 45px 0 91px;
+  }
 }
 
 .order__form_input,
 .order__form_select {
+  margin-top: 12px;
   display: block;
 }
 
@@ -369,7 +400,9 @@ span.slider__dot {
   font-size: 23px;
 }
 
-.order__form_info {
+.order__form_info,
+.order__form_comment{
+  margin-top: 25px;
   width: 100%;
 }
 
@@ -395,6 +428,10 @@ textarea {
 }
 
 .basket__card {
+  margin-top: 25px;
+  background-color: #F4F4F4;
+  box-sizing: border-box;
+  padding: 23px;
   .button__wrapper {
     overflow: auto;
     button {
@@ -403,12 +440,14 @@ textarea {
       border: 0;
       background-color: transparent;
       img {
+        margin-right: 0;
         width: 20px;
         height: 20px;
       }
     }
   }
   img {
+    margin-right: 21px;
     width: 170px;
     height: 170px;
   }
@@ -424,24 +463,31 @@ textarea {
       font-size: 18px;
     }
     p {
+      margin: 16px 0 16px;
       font-weight: 300;
       font-size: 16px;
       &.color-gray {
         color: #867979;
       }
     }
-    .basket__card_price {
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    .basket_card_number {
-      display: inline;
+    .basket__card_sum {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+      .basket__card_price {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .basket_card_number {
+        display: inline-block;
+      }
     }
   }
 }
 
 .basket__sum {
+  margin-top: 25px;
   font-weight: bold;
   font-size: 18px;
   span {

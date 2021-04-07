@@ -35,10 +35,12 @@ header {
     .nav {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       .nav__item {
         cursor: pointer;
         margin-left: 3.5rem;
         display: flex;
+        transition: all 0.3s ease-in;
         img {
           width: 21px;
           height: 20px;
@@ -47,6 +49,26 @@ header {
       }
       .nav__item:last-child {
         margin-left: 7rem;
+      }
+
+      .active {
+        width: 120px;
+        height: 30px;
+        background-color: white;
+        transform: skewX(20deg);
+        z-index: -1;
+        transition: all 0.3s ease-in;
+        font-style: normal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          transform: skewX(-20deg);
+          color: black;
+          img {
+            filter: invert(100%);
+          }
+        }
       }
     }
   }
@@ -81,7 +103,7 @@ button {
   }
   .btn {
     margin-top: 12px;
-    background: #DD0909;
+    background: #dd0909;
     border-radius: 40px;
     color: #fff;
     border: none;
@@ -89,7 +111,6 @@ button {
     width: 270px;
     height: 60px;
   }
-
 }
 
 .info {
@@ -157,7 +178,7 @@ button {
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 70px;
   .pizza-card {
-    background-color: #F4F4F4;
+    background-color: #f4f4f4;
     padding: 22px;
     margin-top: 50px;
     text-align: center;
@@ -195,7 +216,7 @@ button {
     }
     .btn {
       margin-top: 12px;
-      background: #DD0909;
+      background: #dd0909;
       border-radius: 40px;
       color: #fff;
       border: none;
@@ -209,7 +230,7 @@ button {
 .menu__extend {
   width: 100%;
   border: none;
-  background-color: #DCDCDC;
+  background-color: #dcdcdc;
   height: 48px;
   margin-top: 26px;
   font-style: normal;
@@ -322,7 +343,7 @@ span.slider__dot {
     display: block;
   }
   &__title {
-    margin-top: 90px;
+    margin-top: 50px;
   }
 }
 
@@ -332,13 +353,14 @@ span.slider__dot {
 }
 
 .advantage {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   justify-content: space-between;
   .advantage__description {
     max-width: 45%;
     display: flex;
     align-items: center;
+    font-size: 1.2rem;
   }
   .advantage__image-wrapper {
     img {
@@ -370,7 +392,7 @@ span.slider__dot {
 }
 
 .address {
-  margin: 225px 0 49px;
+  margin: 49px 0 49px;
   line-height: 40px;
   font-weight: bold;
   font-size: 20px;
@@ -410,7 +432,7 @@ span.slider__dot {
   flex-direction: column;
   .btn_red {
     margin: 45px 0 91px;
-    background: #DD0909;
+    background: #dd0909;
     border-radius: 40px;
     color: #fff;
     border: none;
@@ -432,7 +454,7 @@ span.slider__dot {
 }
 
 .order__form_info,
-.order__form_comment{
+.order__form_comment {
   margin-top: 25px;
   width: 100%;
 }
@@ -460,7 +482,7 @@ textarea {
 
 .basket__card {
   margin-top: 25px;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   box-sizing: border-box;
   padding: 23px;
   .button__wrapper {
@@ -514,14 +536,15 @@ textarea {
         display: flex;
         justify-content: space-between;
         width: 68px;
-        background-color: #ECECEC;
+        background-color: #ececec;
         border-radius: 15px;
         button {
           border: none;
-          background-color: #ECECEC;
+          background-color: #ececec;
         }
         span {
-          background-color: #ECECEC;
+          background-color: #ececec;
+          line-height: 24px;
         }
       }
     }

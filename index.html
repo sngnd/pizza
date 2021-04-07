@@ -9,26 +9,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+    <script src="jquery-3.6.0.min.js"></script>
     <title>BUYGET Pizza</title>
 </head>
 
-<body class="page">
-    <header class="header page__header">
-        <div class="wrapper">
+<body class="page" id="main">
+    <header class="header page__header"  >
+        <nav class="wrapper">
             <h1 class="logo logo_header"><a href="index.html">BUYGET</a></h1>
             <ul class="nav">
-                <li class="nav__item">Меню</li>
-                <li class="nav__item">Акции</li>
-                <li class="nav__item">О нас</li>
-                <li class="nav__item"><a href="basket.html">Корзина
+                <li class="nav__item active" data-element="main"><a>Главная</a></li>
+                <li class="nav__item" data-element="menu"> <a>Меню</a></li>
+                <li class="nav__item" data-element="sales"><a>Акции</a></li>
+                <li class="nav__item" data-element="about"><a>О нас</a></li>
+                <li class="nav__item basket" id="basketBtn"><a href="./basket.html">Корзина
                     <img class="nav__cart" src="./img/basket.png" />
                 </a>
                 </li>
             </ul>
-        </div>
+        </nav>
     </header>
     <main>
-        <section class="content">
+        <section class="content" id="main">
             <div class="content__background">
                 <div class="wrapper">
                     <div class="info">
@@ -40,7 +42,7 @@
             </div>
         </section>
 
-        <section class="menu">
+        <section class="menu" id="menu">
             <div class="wrapper">
                 <div class="menu__header">
                     <h2 class="menu__title title">МЕНЮ</h2>
@@ -69,7 +71,7 @@
                 </select>
                         </div>
                         <h3 class="pizza__price">15.89 BYN</h3>
-                        <button class="btn btn_red">В корзину</button>
+                        <button class="btn btn_red" id="addToCartBtn">В корзину</button>
                     </div>
                     <div class="pizza-card">
                         <div class="pizza-card__image"></div>
@@ -89,7 +91,7 @@
                 </select>
                         </div>
                         <h3 class="pizza__price">15.89 BYN</h3>
-                        <button class="btn btn_red">В корзину</button>
+                        <button class="btn btn_red" id="addToCartBtn">В корзину</button>
                     </div>
                     <div class="pizza-card">
                         <div class="pizza-card__image"></div>
@@ -109,7 +111,7 @@
                 </select>
                         </div>
                         <h3 class="pizza__price">15.89 BYN</h3>
-                        <button class="btn btn_red">В корзину</button>
+                        <button class="btn btn_red" id="addToCartBtn">В корзину</button>
                     </div>
                     <div class="pizza-card">
                         <div class="pizza-card__image"></div>
@@ -129,7 +131,7 @@
                 </select>
                         </div>
                         <h3 class="pizza__price">15.89 BYN</h3>
-                        <button class="btn btn_red">В корзину</button>
+                        <button class="btn btn_red" id="addToCartBtn">В корзину</button>
                     </div>
                     <div class="pizza-card">
                         <div class="pizza-card__image"></div>
@@ -149,7 +151,7 @@
                 </select>
                         </div>
                         <h3 class="pizza__price">15.89 BYN</h3>
-                        <button class="btn btn_red">В корзину</button>
+                        <button class="btn btn_red" id="addToCartBtn">В корзину</button>
                     </div>
                     <div class="pizza-card">
                         <div class="pizza-card__image"></div>
@@ -169,14 +171,14 @@
                 </select>
                         </div>
                         <h3 class="pizza__price">15.89 BYN</h3>
-                        <button class="btn btn_red">В корзину</button>
+                        <button class="btn btn_red" id="addToCartBtn">В корзину</button>
                     </div>
                 </div>
                 <button class="btn menu__extend">Показать далее</button>
             </div>
         </section>
 
-        <section class="sales">
+        <section class="sales" id="sales">
             <div class="wrapper">
                 <h2 class="sales__title title">АКЦИИ</h2>
                 <div class="sales__slider">
@@ -201,7 +203,7 @@
             </div>
         </section>
 
-        <section class="about">
+        <section class="about" id="about">
             <div class="wrapper">
                 <h2 class="about__title title">О НАС</h2>
                 <div class="advantages">
@@ -255,6 +257,7 @@
             Подготовили студенты гр. 810902:<span><br /> Детнер Кирилл<br /> Баранова Анна<br /> Матышев Константин</span>
         </p>
     </footer>
+    <script src="index.js"></script>
 </body>
 
 </html>

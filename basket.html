@@ -14,25 +14,27 @@
       href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
       rel="stylesheet"
     />
-    <title>BUYGET Pizza</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <title>Basket</title>
   </head>
 
   <body class="page">
     <header class="header page__header">
-      <div class="wrapper">
+      <nav class="wrapper">
         <h1 class="logo logo_header"><a href="index.html">BUYGET</a></h1>
         <ul class="nav">
-          <li class="nav__item">Меню</li>
-          <li class="nav__item">Акции</li>
-          <li class="nav__item">О нас</li>
-          <li class="nav__item">
+          <li class="nav__item" data-element="main"><a>Главная</a></li>
+          <li class="nav__item" data-element="menu"><a>Меню</a></li>
+          <li class="nav__item" data-element="sales"><a>Акции</a></li>
+          <li class="nav__item" data-element="about"><a>О нас</a></li>
+          <li class="nav__item active">
             <a href="basket.html"
               >Корзина
               <img class="nav__cart" src="./img/basket.png" />
             </a>
           </li>
         </ul>
-      </div>
+      </nav>
     </header>
     <main>
       <section class="basket__wrapper">
@@ -105,8 +107,14 @@
 
     <footer class="footer page__footer">
       <p class="authors">
-        Подготовили студенты гр. 810902:<span><br /> Детнер Кирилл<br /> Баранова Анна<br /> Матышев Константин</span>
+        Подготовили студенты гр. 810902:<span
+          ><br />
+          Детнер Кирилл<br />
+          Баранова Анна<br />
+          Матышев Константин</span
+        >
       </p>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>

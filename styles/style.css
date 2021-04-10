@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -6,6 +7,88 @@ section {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+select {
+  display: inline-block;
+  margin-top: 5px !important;
+  border: 1px solid #777;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+}
+
+select::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: #777;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+select:focus + .focus {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: 2px solid blue;
+  border-radius: inherit;
+}
+
+.select-box {
+  cursor: pointer;
+  position: relative;
+  max-width: 20em;
+  margin: 5em auto;
+  width: 100%;
+}
+
+.select,
+.label {
+  color: #414141;
+  display: block;
+  font: 400 17px/2em "Source Sans Pro", sans-serif;
+}
+
+.select {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  padding: 5px 0;
+  height: 40px;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  background: none transparent;
+  border: 0 none;
+}
+
+.select-box1 {
+  background: #ececec;
+}
+
+.label {
+  position: relative;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.open .label::after {
+  content: "▲";
+}
+
+.label::after {
+  content: "▼";
+  font-size: 12px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px 15px;
+  border-left: 5px solid #fff;
 }
 
 a {
@@ -165,6 +248,8 @@ button {
 }
 .menu__header .menu__sort .sort-type {
   margin-left: 10px;
+  border: 0;
+  border-radius: 2px;
 }
 
 .menu__pizza {
@@ -180,7 +265,6 @@ button {
   transition: all 0.5s ease;
 }
 .menu__pizza .pizza-card .pizza-card__image {
-  transition: 0.75s ease;
   background-image: url(../img/pizza.png);
   background-size: contain;
   background-position: center;
@@ -225,10 +309,22 @@ button {
 }
 .menu__pizza .pizza-card:hover {
   background-color: #f1eeee;
+  transform: scale(1.05);
+  transition: 1s ease;
 }
 .menu__pizza .pizza-card:hover .pizza-card__image {
-  transition: 1s ease;
-  transform: scale(1.05) rotate(360deg);
+  animation-name: rotate;
+  animation-duration: 1.25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .menu__pizza .pizza-card:hover .pizza__price {
   transition: 1s ease;

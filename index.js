@@ -3,7 +3,6 @@ $(document).ready(function () {
     if (document.title === "Basket") {
       document.location.href = "./index.html";
     }
-    console.log($(this));
     if ($(this).attr("class").includes("basket")) return;
     $(".active").removeClass("active");
     $(this).addClass("active");
@@ -16,6 +15,15 @@ $(document).ready(function () {
     );
   });
 
+  $("#btnTaste").click(function() {
+    const elementToScrollTo = $(this).data("element");
+    $("html, body").animate(
+      {
+        scrollTop: $(`#${elementToScrollTo}`).position().top - 65,
+      },
+      400
+    );
+  })
   const order = document.querySelector('.order');
   order.classList.add('visible-order');
 

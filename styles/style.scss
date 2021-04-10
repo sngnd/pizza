@@ -96,7 +96,6 @@ button {
   background-position: center;
   display: flex;
   justify-content: center;
-  width: 100%;
   .wrapper {
     height: 100%;
     align-items: center;
@@ -178,11 +177,13 @@ button {
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 70px;
   .pizza-card {
-    background-color: #f4f4f4;
+    background-color: #faf6f6;
     padding: 22px;
     margin-top: 50px;
     text-align: center;
+    transition: all .5s ease;
     .pizza-card__image {
+      transition: .75s ease;
       background-image: url(../img/pizza.png);
       background-size: contain;
       background-position: center;
@@ -210,6 +211,7 @@ button {
       margin-top: 5px;
     }
     .pizza__price {
+      transition: .75s ease;
       margin-top: 18px;
       font-weight: normal;
       font-size: 16px;
@@ -223,6 +225,18 @@ button {
       font-size: 14px;
       width: 140px;
       height: 40px;
+    }
+
+    &:hover {
+      background-color: #f1eeee;
+      .pizza-card__image {
+        transition: 1s ease;
+        transform: scale(1.05) rotate(360deg);;
+      }
+      .pizza__price {
+        transition: 1s ease;
+        color: #dd0909;
+      }
     }
   }
 }
@@ -420,11 +434,23 @@ span.slider__dot {
     justify-content: space-between;
     .order {
       width: 35%;
+      margin-left: -600px;
+      transition: 1s ease;
     }
     .basket {
       width: 40%;
+      margin-right: -600px;
+      transition: 1s ease;
     }
   }
+}
+
+.visible-order {
+  margin-left: 0 !important;
+}
+
+.visible-basket {
+  margin-right: 0 !important;
 }
 
 .order__form {

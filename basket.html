@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" style="overflow-x: hidden">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,30 +43,30 @@
             <h2 class="order__title">Оформление заказа</h2>
             <form class="order__form">
               <label class="order__form_info"
-                >ФИО* <input class="order__form_input" type="text"
+                >ФИО* <input class="order__form_input" type="text" required
               /></label>
               <label class="order__form_info"
                 >Выбор ресторана
-                <select class="order__form_select">
+                <select class="order__form_select" required>
                   <option value="first">ул. П.Мстиславца, 4</option>
                 </select>
               </label>
               <span class="order__form_info red-center">или</span>
               <label class="order__form_info"
-                >Адрес доставки <input class="order__form_input" type="text"
+                >Адрес доставки <input class="order__form_input" type="text" required
               /></label>
               <label class="order__form_info"
                 >Предпочтительное время*
-                <input class="order__form_input" type="text"
+                <input class="order__form_input" type="text" required
               /></label>
               <label class="order__form_info"
-                >Номер телефона* <input class="order__form_input" type="text"
+                >Номер телефона* <input class="order__form_input" type="text" required
               /></label>
               <label class="order__form_comment"
                 >Комментарий
                 <textarea class="order__form_input" type="text"></textarea>
               </label>
-              <button class="btn btn_red">Оформить заказ</button>
+              <button class="btn btn_red" type="submit">Оформить заказ</button>
             </form>
           </div>
           <div class="basket">

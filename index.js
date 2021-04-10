@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $(".nav__item").click(function () {
-    if (document.title == "Basket") {
+    if (document.title === "Basket") {
       document.location.href = "./index.html";
     }
     console.log($(this));
@@ -15,4 +15,10 @@ $(document).ready(function () {
       400
     );
   });
+
+  const order = document.querySelector('.order');
+  order.classList.add('visible-order');
+
+  const basket = document.querySelector('.basket');
+  basket.classList.add('visible-basket');
 });
